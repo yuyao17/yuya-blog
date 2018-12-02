@@ -13,7 +13,6 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
-          marginBottom: rhythm(2.5),
         }}
       >
         <img
@@ -29,7 +28,7 @@ class Bio extends React.Component {
         />
         <p>
           Written by <strong>Yuya Oiwa</strong> who lives and works in Japan
-          building useful things.
+          building useful things. I write in both English and Japanese!
         </p>
       </div>
     )

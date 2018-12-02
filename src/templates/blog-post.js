@@ -31,9 +31,15 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          style={{
+            margin: `${rhythm(1.5)} 0`,
+          }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
+            marginTop: rhythm(3.5),
             marginBottom: rhythm(1),
           }}
         />
