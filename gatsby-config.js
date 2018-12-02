@@ -7,11 +7,18 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
+    `gatsby-plugin-netlify-identity-widget`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: 'CMS Manager',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/pages/blogs`,
+        name: 'blogs',
       },
     },
     {
