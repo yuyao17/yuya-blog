@@ -3,7 +3,7 @@ module.exports = {
     title: "Yuya's Blog",
     author: 'Yuya Oiwa',
     description: "Yuya's blog!!",
-    siteUrl: 'https://epic-colden-c152c2.netlify.com/',
+    siteUrl: 'https://yuya-blog.netlify.com/',
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -37,7 +37,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '÷',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],

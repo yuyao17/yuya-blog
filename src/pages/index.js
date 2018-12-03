@@ -6,8 +6,6 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 
-require('prismjs/themes/prism-solarizedlight.css')
-
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
