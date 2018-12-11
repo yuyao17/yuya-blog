@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
+import { coffenate } from '../utils/helper'
 
 class BlogIndex extends React.Component {
   render() {
@@ -41,6 +42,8 @@ class BlogIndex extends React.Component {
               >
                 {node.frontmatter.date}
               </small>
+              <br />
+              <small>{coffenate(node.frontmatter.timeToRead)}</small>
               <p
                 style={{
                   marginTop: rhythm(1),
@@ -75,6 +78,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            timeToRead
           }
         }
       }
